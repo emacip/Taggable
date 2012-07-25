@@ -1,4 +1,7 @@
 Taggable::Application.routes.draw do
+  resources :posts
+  match 'tagged' => 'posts#tagged', :as => 'tagged'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
